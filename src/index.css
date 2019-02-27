@@ -12,3 +12,60 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.faq-container{
+  margin: 0 auto;
+  transition: all 0.5s linear;
+}
+
+.faq-container p{
+  border: 1px solid transparent;
+  transition: all 0.3s linear;
+  padding: 0px;
+  margin: 0px;
+  display: block;
+
+}
+.center{
+  margin: 0 auto;
+}
+.quarter{
+  width: 25%;
+  float: left;
+}
+
+.white{
+  background: white;
+  color: green;
+}
+
+.hidden{
+  display: none;
+}
+
+.faq-desc{
+  border: 1px solid #000;
+  transition: all 0.3s linear;
+  padding: 10px;
+  margin-top:50px
+}
+.box h4{
+  width: 80%;
+  float: left;
+}
+
+.faq{
+  border: 1px solid #ccc;
+  padding: 10px;
+  clear:both; 
+}
+
+.faq button{
+  font-size: 32px;
+  line-height:50px;
+}
+
+.right{   
+  float: right;
+}

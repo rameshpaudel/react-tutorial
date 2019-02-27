@@ -1,28 +1,47 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Banner from "./components/Banner";
+import Card from "./components/Card.js";
+import CardList from "./components/CardList.js";
+import Paragraph from "./components/Paragraph";
+import FAQList from "./components/FAQList";
+import Input from "./components/Input";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    onClickHandler() {
+        alert("SHOW TIME");
+    }
+
+    render() {
+        var data = {
+            image: "http://lorempixel.com/400/200/abstract/1/"
+        };
+
+        return (
+            <div className="App">
+                {/* <Paragraph />
+        <Banner image={data.image}/>
+        <CardList />
+        <br/>
+        <hr/>
+        
+
+        <CardList show={4}>
+          <Banner/>
+        </CardList>
+
+        
+        <br/>
+        <hr/>
+        <CardList /> */}
+                <Input />
+                <hr />
+                <FAQList />
+            </div>
+        );
+    }
+    generateTitle() {
+        return "Hello World ";
+    }
 }
 
 export default App;
