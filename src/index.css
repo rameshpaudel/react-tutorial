@@ -17,7 +17,8 @@ code {
 .faq-container{
   margin: 0 auto;
   transition: all 0.5s linear;
-}
+} 
+
 
 .faq-container p{
   border: 1px solid transparent;
@@ -47,7 +48,9 @@ code {
   border: 1px solid #000;
   transition: all 0.3s linear;
   padding: 10px;
-  margin-top:50px
+  margin-top:50px;
+  display: flex;
+  width: 100%;
 }
 .box h4{
   width: 80%;
