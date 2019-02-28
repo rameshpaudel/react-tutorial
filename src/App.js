@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import Banner from "./components/Banner";
-import Card from "./components/Card.js";
 import CardList from "./components/CardList.js";
-import Paragraph from "./components/Paragraph";
 import FAQList from "./components/FAQList";
 import Input from "./components/Input";
+
+// import Card from "./components/Card.js";
+// import Paragraph from "./components/Paragraph";
 
 class App extends Component {
     onClickHandler() {
@@ -18,29 +19,27 @@ class App extends Component {
 
         return (
             <div className="App">
+                <Banner image={data.image} />
+                <CardList />
                 {/* <Paragraph />
-        <Banner image={data.image}/>
-        <CardList />
-        <br/>
-        <hr/>
-        
+                    <br/>
+                    <hr/>
+                    
 
-        <CardList show={4}>
-          <Banner/>
-        </CardList>
+                    <CardList show={4}>
+                    <Banner/>
+                    </CardList>
 
-        
-        <br/>
-        <hr/>
-        <CardList /> */}
+                    
+                    <br/>
+                    <hr/>
+                    <CardList /> 
+                */}
                 <Input />
                 <hr />
                 <FAQList />
             </div>
         );
-    }
-    generateTitle() {
-        return "Hello World ";
     }
 }
 

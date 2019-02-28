@@ -5,10 +5,10 @@ class Banner extends Component {
         super(props);
         this.state = {
             images: [
-                "http://lorempixel.com/1300/200/technology",
-                "http://lorempixel.com/1300/200/sports",
-                "http://lorempixel.com/1300/200/abstract",
-                "http://lorempixel.com/1300/200/nature"
+                "http://lorempixel.com/1300/500/nature",
+                "http://lorempixel.com/1300/500/sports",
+                "http://lorempixel.com/1300/500/abstract",
+                "http://lorempixel.com/1300/500/nature"
             ],
             position: 0
         }
@@ -16,10 +16,10 @@ class Banner extends Component {
     }
 
     onNextClickHandler(){
-        if(this.state.position < this.state.images.length){
-            this.setState({
-                position: this.state.position + 1
-            });
+        if(this.state.position < this.state.images.length - 1){
+            this.setState(state=> ({
+                position: state.position + 1
+            }));
         }
         console.log("Current image", this.state.images[this.state.position])
     }
@@ -36,13 +36,13 @@ class Banner extends Component {
     
     render() {
         return (
-            <div>
+            <div className="banner">
                 <img
                     src={this.state.images[this.state.position]}
                     alt=""
                 />
-                <button onClick={ () => this.onPrevClickHandler() }>Prev</button>
-                <button onClick={ this.onNextClickHandler.bind(this) }>Next</button>
+                <button className="btn left" onClick={ () => this.onPrevClickHandler() }> &lt; </button>
+                <button className="btn right" onClick={ this.onNextClickHandler.bind(this) }> &gt; </button>
                 
                 <section>{this.props.children};</section>
             </div> 

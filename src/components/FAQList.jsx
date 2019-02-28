@@ -7,7 +7,7 @@ class FAQList extends Component {
 
     generateFAQ(){
         return faqs.map((value,index) => {
-            return <FAQ title={value.title} description={value.description} />
+            return <FAQ key={index} title={value.title} description={value.description} />
         })
     }
     render() {
