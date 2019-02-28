@@ -15,11 +15,33 @@ class Banner extends Component {
         
     }
 
+    componentDidMount() {
+        setTimeout(() => {
+            this.addImage()
+            this.setState({position:3})
+        }, 10000);
+    }
+
+    // componentWillMount() {
+
+    // }
+    
+    addImage(){
+        var images = this.state.images;
+        images.push("http://lorempixel.com/100/200/abstract")
+        this.setState(state=>({
+            images: images
+        }))
+    }
+
     onNextClickHandler(){
         if(this.state.position < this.state.images.length - 1){
-            this.setState(state=> ({
-                position: state.position + 1
-            }));
+            this.setState(function(state){
+                return {
+                    position: state.position + 1
+                }
+            });
+
         }
         console.log("Current image", this.state.images[this.state.position])
     }
