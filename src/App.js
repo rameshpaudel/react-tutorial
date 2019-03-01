@@ -5,6 +5,7 @@ import FAQList from "./components/FAQList";
 import Input from "./components/Input";
 import MyForm from "./components/MyForm";
 import Test from './components/Test'
+import ApiSearch from "./components/APISearch";
 
 // import Card from "./components/Card.js";
 // import Paragraph from "./components/Paragraph";
@@ -43,6 +44,9 @@ class App extends Component {
                 <Input />
                 <hr />
                 <FAQList />
+                <hr/>
+                <ApiSearch/>
+                
                 
             </div>
         );

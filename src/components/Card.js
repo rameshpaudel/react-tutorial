@@ -5,7 +5,7 @@ class Card extends Component {
         return (
             <div>
                 <img
-                    src="http://lorempixel.com/200/200/technology/Test/"
+                    src={this.props.image || "http://lorempixel.com/200/200/technology/Test/"}
                     alt=""
                 />
                 <h1>{this.props.title || `This is a card`}</h1>
