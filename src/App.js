@@ -3,10 +3,11 @@ import Banner from "./components/Banner";
 import CardList from "./components/CardList.js";
 import FAQList from "./components/FAQList";
 import Input from "./components/Input";
+import MyForm from "./components/MyForm";
+import Test from './components/Test'
 
 // import Card from "./components/Card.js";
 // import Paragraph from "./components/Paragraph";
-
 class App extends Component {
     onClickHandler() {
         alert("SHOW TIME");
@@ -19,6 +20,10 @@ class App extends Component {
 
         return (
             <div className="App">
+                <hr />
+                <Test title="Check this out"/>
+                <br />
+                <MyForm />
                 <Banner image={data.image} />
                 <CardList />
                 {/* <Paragraph />
@@ -38,6 +43,7 @@ class App extends Component {
                 <Input />
                 <hr />
                 <FAQList />
+                
             </div>
         );
     }

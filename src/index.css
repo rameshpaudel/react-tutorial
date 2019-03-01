@@ -92,6 +92,26 @@ code {
   float: left;
 }
 
+.dark{
+  background: #ededed;
+  clear: both;
+}
+
+.dark input, .dark textarea{
+  padding: 10px;
+  display: block;
+  border: 2px solid red;
+}
+.dark .half{
+  width:50%;
+  float: left;
+  box-sizing: border-box;
+  background: #ccc;
+}
+
+.dark h1{
+background: white;
+}
 .faq{
   border: 1px solid #ccc;
   padding: 10px;
