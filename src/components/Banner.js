@@ -22,9 +22,6 @@ class Banner extends Component {
         }, 10000);
     }
 
-    // componentWillMount() {
-
-    // }
     
     addImage(){
         var images = this.state.images;

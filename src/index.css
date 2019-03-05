@@ -126,3 +126,11 @@ background: white;
 .right{   
   float: right;
 }
+
+.fail{
+  color: red;
+}
+
+.pass {
+  color: green;
+}
