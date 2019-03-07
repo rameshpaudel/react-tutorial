@@ -41,10 +41,10 @@ class NASAApi extends Component {
 
     render() {
         return (
-            <div className="quarter">
+            <div>
                 <h1>NASA API WORKS</h1>
                 <h4>{this.state.title}</h4>
-                <img src={this.state.image} alt="" />
+                <img className="thumbnail" src={this.state.image} alt="" />
                 <p>Date: {this.state.date}</p>
                 <a href={this.state.url} target="blank">
                     Click Here

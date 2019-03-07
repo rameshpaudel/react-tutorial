@@ -5,18 +5,8 @@ import FAQList from "./components/FAQList";
 import Input from "./components/Input";
 import MyForm from "./components/MyForm";
 import Test from "./components/Test";
-import ApiSearch from "./components/APISearch";
-import Profile from "./containers/Profile";
-import ProductForm from "./containers/ProductForm";
-import NASAApi from "./containers/NASAApi";
 
-// import Card from "./components/Card.js";
-// import Paragraph from "./components/Paragraph";
 class App extends Component {
-    onClickHandler() {
-        alert("SHOW TIME");
-    }
-
     render() {
         var data = {
             image: "http://lorempixel.com/400/200/abstract/1/"
@@ -24,35 +14,13 @@ class App extends Component {
 
         return (
             <div className="App">
-                <NASAApi />
-                <hr />
-                <ProductForm />
-                <hr />
-                <Profile />
                 <Test title="Check this out" />
-                <br />
-                <MyForm />
                 <Banner image={data.image} />
-                <CardList />
-                {/* <Paragraph />
-                    <br/>
-                    <hr/>
-                    
-
-                    <CardList show={4}>
-                    <Banner/>
-                    </CardList>
-
-                    
-                    <br/>
-                    <hr/>
-                    <CardList /> 
-                */}
-                <Input />
-                <hr />
+                <MyForm />
+                <div className="container">
+                    <CardList />
+                </div>
                 <FAQList />
-                <hr />
-                <ApiSearch />
             </div>
         );
     }

@@ -40,14 +40,16 @@ class ApiSearch extends Component {
             <div className="dark">
                 <input
                     type="text"
+                    style={{ padding:"10px", border: "1px solid green" }}
                     placeholder="Ingredient Here"
                     onChange={this.onChangeInput.bind(this)}
                 />
                 <button onClick={this.handleSearch.bind(this)}>Search</button>
-
-                {this.state.items.map((value,index)=>{
-                    return (<Card key={index} image={value.thumbnail} title={value.title} description={value.ingredients}/>)
-                })}
+                <div className="rows">
+                    {this.state.items.map((value,index)=>{
+                        return (<Card key={index} image={value.thumbnail} title={value.title} description={value.ingredients}/>)
+                    })}
+                </div>
             </div>
         );
     }
