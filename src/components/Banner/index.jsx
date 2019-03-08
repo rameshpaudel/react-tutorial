@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import './style.css'
 class Banner extends Component {
     constructor(props) {
         super(props);
@@ -12,28 +12,28 @@ class Banner extends Component {
             ],
             position: 0
         }
-        
+
     }
 
     componentDidMount() {
         setTimeout(() => {
             this.addImage()
-            this.setState({position:3})
+            this.setState({ position: 3 })
         }, 10000);
     }
 
-    
-    addImage(){
+
+    addImage() {
         var images = this.state.images;
         images.push("http://lorempixel.com/100/200/abstract")
-        this.setState(state=>({
+        this.setState(state => ({
             images: images
         }))
     }
 
-    onNextClickHandler(){
-        if(this.state.position < this.state.images.length - 1){
-            this.setState(function(state){
+    onNextClickHandler() {
+        if (this.state.position < this.state.images.length - 1) {
+            this.setState(function (state) {
                 return {
                     position: state.position + 1
                 }
@@ -42,17 +42,17 @@ class Banner extends Component {
         }
         console.log("Current image", this.state.images[this.state.position])
     }
-    
-    onPrevClickHandler(){
+
+    onPrevClickHandler() {
         console.log('[rev', this)
-        if(this.state.position > 0){
+        if (this.state.position > 0) {
             this.setState({
                 position: this.state.position - 1
             });
         }
         console.log("Current poition", this.state.position)
     }
-    
+
     render() {
         return (
             <div className="banner">
@@ -60,11 +60,11 @@ class Banner extends Component {
                     src={this.state.images[this.state.position]}
                     alt=""
                 />
-                <button className="btn left" onClick={ () => this.onPrevClickHandler() }> &lt; </button>
-                <button className="btn right" onClick={ this.onNextClickHandler.bind(this) }> &gt; </button>
-                
+                <button className="btn left" onClick={() => this.onPrevClickHandler()}> &lt; </button>
+                <button className="btn right" onClick={this.onNextClickHandler.bind(this)}> &gt; </button>
+
                 <section>{this.props.children};</section>
-            </div> 
+            </div>
         );
     }
 }

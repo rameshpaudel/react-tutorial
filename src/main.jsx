@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import NASAAPI from "./containers/NASAApi";
 import ProductForm from "./containers/ProductForm";
 import Profile from "./containers/Profile";
-import NotFound from "./containers/NotFound";
+import TestApi from "./containers/TestAPI";
+// import NotFound from "./containers/NotFound";
 import App from "./App";
 import ApiSearch from "./components/APISearch";
 class AppContainer extends Component {
@@ -39,6 +40,7 @@ class AppContainer extends Component {
                         <Route path="/product" component={ProductForm} />
                         <Route path="/old-file" component={App} />
                         <Route path="/api-search" component={ApiSearch} />
+                        <Route path="/" component={TestApi} />
                         {/* <Route path="*" component={NotFound} /> */}
                     </div>
                 </div>

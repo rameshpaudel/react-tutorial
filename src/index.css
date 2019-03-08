@@ -44,40 +44,6 @@ code {
   display: none;
 }
 
-.banner{
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.banner .btn{
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.5s linear;
-}
-.banner:hover .btn{
-  visibility: visible;
-  opacity: 1;
-}
-
-.banner .btn{
-  background: transparent;
-  color: rgba(255,255,255,0.9);
-  font-size: 32px;
-  border: none;
-  padding:20px;
-}
-.banner .btn.left{
-  position: absolute;
-  top:40%;
-  left: 5%;
-}
-.banner .btn.right{
-  position: absolute;
-  top:40%;
-  right: 5%;
-}
-
 
 .faq-desc{
   border: 1px solid #000;
@@ -168,5 +134,5 @@ nav ul li a:hover{
   width:100%;
   max-width: 95vw;
   align-items: center;
-  /* justify-content:  */
+  /* justify-content:    */
 }
