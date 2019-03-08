@@ -40,7 +40,7 @@ class AppContainer extends Component {
                         <Route path="/product" component={ProductForm} />
                         <Route path="/old-file" component={App} />
                         <Route path="/api-search" component={ApiSearch} />
-                        <Route path="/" component={TestApi} />
+                        <Route path="/" exact component={TestApi} />
                         {/* <Route path="*" component={NotFound} /> */}
                     </div>
                 </div>
