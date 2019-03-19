@@ -8,6 +8,7 @@ import TestApi from "./containers/TestAPI";
 // import NotFound from "./containers/NotFound";
 import App from "./App";
 import ApiSearch from "./components/APISearch";
+import BudgetCalculator from "./containers/Budget";
 class AppContainer extends Component {
     render() {
         return (
@@ -30,6 +31,9 @@ class AppContainer extends Component {
                             <li>
                                 <Link to="/api-search">API SEARCH</Link>
                             </li>
+                            <li>
+                                <Link to="/budget-calculator">Budget Calculator</Link>
+                            </li>
                         </ul>
                     </nav>
 
@@ -41,6 +45,7 @@ class AppContainer extends Component {
                         <Route path="/old-file" component={App} />
                         <Route path="/api-search" component={ApiSearch} />
                         <Route path="/" exact component={TestApi} />
+                        <Route path="/budget-calculator"  component={BudgetCalculator} />
                         {/* <Route path="*" component={NotFound} /> */}
                     </div>
                 </div>

@@ -1,0 +1,13 @@
+.budget-container{
+    width: 90vw;
+    margin: 0 auto;
+}
+table{
+    width: 100%;
+}
+
+thead,th{
+    background: #2f2f2f;
+    color: white;
+    padding: 5px 10px;
+}

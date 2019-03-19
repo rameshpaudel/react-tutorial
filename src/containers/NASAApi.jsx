@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import { fetchAPI } from '../api/index'
+import axios from 'axios';
 const url =
     "https://api.nasa.gov/planetary/apod?api_key=2K1YXDfAqg9Gcsu5XYt4UUZzvVmcPKZs0813bTHM";
 class NASAApi extends Component {
@@ -12,8 +13,20 @@ class NASAApi extends Component {
             image: ""
         };
     }
-
-    queryAPI() {
+    queryAPI(){
+        axios.get(url)
+        .then(response=>{
+            console.log("Data from server", response.data)
+            this.setState({
+                title: response.data.title, // title is a property of the response object
+                url: response.data.url,
+                date: response.data.date,
+                image: response.data.hdurl
+            });
+        })
+        .catch(error=> console.warn('error ', error))
+    }
+    oldQueryAPI() {
         fetch(url)
             .then(response => {
                 //When the response was succesful

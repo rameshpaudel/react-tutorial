@@ -1,0 +1,30 @@
+.half{
+    float: left;
+    width: 50%;
+}
+.full{
+    width: 100%;
+}
+.half h4{
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    background: #ededed;
+}
+.savings-info{
+    background:#2f2f2f;
+    padding: 5px 10px;
+}
+
+.savings-info h5{
+    color: white;
+    text-align: center
+}
+
+.clearfix{
+    
+    overflow: hidden;
+}
+.clearfix:after{
+    clear: both;
+}

@@ -14,8 +14,12 @@ class ReqRes extends Component {
 
     apiRequest() {
         fetch("https://reqres.in/api/unknown")
-            .then(response => response.json())
+            .then(response => {
+                console.log(response);
+                return response.json();
+            })
             .then(json => {
+                console.log('JSON RESPONSE',json)
                 this.setState({
                     result: json.data
                 });

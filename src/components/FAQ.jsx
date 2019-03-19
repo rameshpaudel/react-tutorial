@@ -14,18 +14,21 @@ class FAQ extends Component {
         });
     }
     render() {
+        const { title, description, click } = this.props;
+        const { status } = this.state;
+        
         return (
-            <div className="faq-container">
+            <div onClick={click} className="faq-container">
                 <div className="box faq">
-                    <h4>{this.props.title} </h4>
-                    <button className="right" onClick={this.onClickHandler.bind(this)}>
-                        {this.state.status ? " - " : " + "}
-
+                    <h4>{title} </h4>
+                    <button
+                        className="right"
+                        onClick={this.onClickHandler.bind(this)}
+                    >
+                        {status ? " - " : " + "}
                     </button>
                 </div>
-                <p className={this.state.status ? "faq-desc" : "hidden"}>
-                    {this.props.description}
-                </p>
+                <p className={status ? "faq-desc" : "hidden"}>{description}</p>
             </div>
         );
     }
