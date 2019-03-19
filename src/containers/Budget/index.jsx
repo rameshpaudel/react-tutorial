@@ -64,7 +64,7 @@ class BudgetCalculator extends Component {
     } 
     
     clearFields(ref){
-        if (ref.current) {
+        if (ref && ref.current) {
             ref.current.value = ""
         }
     }
